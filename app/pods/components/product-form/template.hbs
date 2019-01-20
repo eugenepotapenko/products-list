@@ -13,7 +13,7 @@
       </div>
       {{form.element label="Title" placeholder="Title" property="title"}}
       {{form.element controlType="textarea" label="Description" placeholder="Description" property="description"}}
-      {{bs-button defaultText="Submit" type="primary" buttonType="submit"}}
+      {{bs-button defaultText="Submit" disabled=isProcessing type="primary" buttonType="submit"}}
     {{/bs-form}}
   {{/modal.body}}
 

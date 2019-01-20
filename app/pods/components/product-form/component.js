@@ -15,6 +15,7 @@ export default Component.extend({
   storageHash: inject(),
   async didReceiveAttrs() {
     const { title, description } = this.product;
+
     let image;
     if (this.product.image) {
       image = await this.storageHash.getFileUrl(this.product.image);
@@ -31,8 +32,10 @@ export default Component.extend({
       const reader = new FileReader();
 
       reader.addEventListener('load', () => {
-        this.set('image', reader.result);
-        this.set('file', files[0]);
+        this.setProperties({
+          image: reader.result,
+          file: files[0]
+        });
       });
 
       reader.readAsDataURL(files[0]);
