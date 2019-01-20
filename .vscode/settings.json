@@ -1,0 +1,14 @@
+{
+  "workbench.colorTheme": "Dracula",
+  "window.zoomLevel": 0,
+  "emmet.triggerExpansionOnTab": true,
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "breadcrumbs.enabled": true,
+  "prettier.jsxSingleQuote": true,
+  "prettier.singleQuote": true,
+  "editor.formatOnSave": true,
+  "prettier.trailingComma": "none",
+  "prettier.semi": true,
+  "[handlebars]": { "editor.formatOnSave": false },
+}

@@ -1,5 +1,14 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
+<nav class="bd-example navbar fixed-top navbar-expand-md navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#">Product list</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+      aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-{{outlet}}
+  </div>
+</nav>
+<main class="container">
+  {{outlet}}
+  {{outlet 'modal'}}
+</main>

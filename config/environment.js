@@ -3,9 +3,18 @@
 module.exports = function(environment) {
   let ENV = {
     modulePrefix: 'test-app',
+    podModulePrefix: 'test-app/pods',
     environment,
     rootURL: '/',
     locationType: 'auto',
+    firebase: {
+      apiKey: 'AIzaSyCQL4Rjm71IYvP-nGlgCpsZI0d3DZpGfOs',
+      authDomain: 'ember-test-abed7.firebaseapp.com',
+      databaseURL: 'https://ember-test-abed7.firebaseio.com',
+      projectId: 'ember-test-abed7',
+      storageBucket: 'ember-test-abed7.appspot.com',
+      messagingSenderId: '538080473827'
+    },
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build

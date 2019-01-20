@@ -1,0 +1,20 @@
+{{#bs-modal onHidden=(action 'onHidden') as |modal|}}
+  {{#modal.header}}
+    <h4 class="modal-title">
+      {{if product.isNew 'New' 'Edit'}} product 
+    </h4>
+  {{/modal.header}}
+  {{#modal.body}}
+    <img src={{image}} class="img-fluid" alt="">
+    {{#bs-form formLayout="horizontal" model=this onSubmit=(action "onSubmit") as |form|}}
+      <div class="form-group">
+        <label for="exampleFormControlFile1">Image</label>
+        <input type="file" class="form-control-file" onchange={{action 'imageChanged'}}>
+      </div>
+      {{form.element label="Title" placeholder="Title" property="title"}}
+      {{form.element controlType="textarea" label="Description" placeholder="Description" property="description"}}
+      {{bs-button defaultText="Submit" type="primary" buttonType="submit"}}
+    {{/bs-form}}
+  {{/modal.body}}
+
+{{/bs-modal}}

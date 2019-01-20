@@ -1,0 +1,19 @@
+<div class="card">
+  {{#if image}}
+    <img class="card-img-top" src={{image}} alt={{product.title}}/>
+  {{/if}}
+  <div class="card-body">
+    <h4 class="card-title"> {{product.title}}</h4>
+    <p class="card-text">
+      {{product.description}}
+    </p>
+    <div class="row">
+      <div class="col">
+        <a href="#" class="btn btn-success btn-block" {{action 'editProduct'}}>Edit</a>
+      </div>
+      <div class="col">
+        <p class="btn btn-danger btn-block" {{action 'removeProduct'}}>Remove</p>
+      </div>
+    </div>
+  </div>
+</div>
